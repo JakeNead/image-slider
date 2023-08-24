@@ -1,4 +1,4 @@
-// right button -----------------------
+// right button actions-----------------------
 const previousElementRightButton = (id) => {
   const previousElement = document.querySelector(`[data-img='${(id - 1).toString()}']`);
   previousElement.classList.remove('previous');
@@ -20,7 +20,7 @@ const hiddenElementRightButton = (id) => {
   hiddenElement.classList.add('next');
 };
 
-// left button -----------------------
+// left button actions-----------------------
 const hiddenElementLeftButton = (id) => {
   const hiddenElement = document.querySelector(`[data-img='${(id - 2).toString()}']`);
   hiddenElement.classList.remove('hiddenLeft');
@@ -84,7 +84,9 @@ const next = (id) => {
 };
 
 const previous = (id) => {
-  console.log('previous');
+  if (currImgId === 1) {
+    disableLeftButton();
+  }
   if (currImgId === 2) {
     previousElementLeftButton(id);
     currentElementLeftButton(id);
