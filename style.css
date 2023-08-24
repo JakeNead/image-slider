@@ -75,8 +75,13 @@ select {
 
 /* _____________________________________ */
 
+
+ body {
+ overflow: hidden;
+ }
+
 #mainContainer {
-  background-color: hsl(0, 0%, 30%);
+  background-color: hsl(0, 0%, 20%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +93,7 @@ select {
   width: 70vw;
   max-width: 1000px;
   height: 70vh;
-  max-height: 1000px;
+  max-height: 70vw;
   position: relative;
   display: flex;
   justify-content: center;
@@ -98,7 +103,8 @@ select {
 #left {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 50%; 
+  fill: hsl(0, 0%, 97%);
 }
 
 #left {
@@ -119,20 +125,23 @@ img {
 
 .previous {
   transform: translate(-70px);
+  opacity: .7; 
 }
 
 .current {
   z-index: 1;
   transform: scale3d(1.1, 1.1, 0.3);
+  opacity: 1;
 }
 
 .next {
-
-  transform: translate(80px);
+  transform: translate(70px);
+  opacity: .7; 
 }
 
 .hiddenRight {
   display: none;
+
   transform: translate(80px);
 }
 
